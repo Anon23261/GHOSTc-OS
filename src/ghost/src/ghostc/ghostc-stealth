@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# GhostC stealth mode manager
+case "$1" in
+    --enable)
+        echo "Enabling stealth mode..."
+        # Disable network interfaces
+        for iface in $(ls /sys/class/net/); do
+            if [ "$iface" != "lo" ]; then
+                ip link set "$iface" down
+            fi
+        done
+        # Clear logs
+        for logfile in /var/log/*; do
+            echo > "$logfile" 2>/dev/null || true
+        done
+        echo "Stealth mode enabled"
+        ;;
+    --disable)
+        echo "Disabling stealth mode..."
+        # Re-enable network interfaces
+        for iface in $(ls /sys/class/net/); do
+            if [ "$iface" != "lo" ]; then
+                ip link set "$iface" up
+            fi
+        done
+        echo "Stealth mode disabled"
+        ;;
+    *)
+        echo "Usage: $0 {--enable|--disable}"
+        exit 1
+        ;;
+esac
