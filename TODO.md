@@ -4,3 +4,6 @@
     - rather than giving a vauge error because `ghostos-builb` isn't defined
     - this also means `ghost-os build` giving a "command not found" error tacitly means that ghost-os isn't the correct way to spell it
   - semi-modular
+- man page
+  - https://man7.org/linux/man-pages/man7/man-pages.7.html
+  - could be section 4 if considered a device or driver
