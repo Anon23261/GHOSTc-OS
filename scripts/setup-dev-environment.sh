@@ -135,6 +135,7 @@ cat > tools/dev/build.sh << 'EOF'
 #!/bin/bash
 set -e
 
+rm TODO.md
 BUILD_TYPE=${1:-Debug}
 mkdir -p build
 cd build
