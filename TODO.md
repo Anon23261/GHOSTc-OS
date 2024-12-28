@@ -1,0 +1,6 @@
+- seperate `ghostos` from its subcommands
+  - like how it's `git commit`, not `git-commit`
+    - this means if someone types `ghostos builb`, it can give a help message
+    - rather than giving a vauge error because `ghostos-builb` isn't defined
+    - this also means `ghost-os build` giving a "command not found" error tacitly means that ghost-os isn't the correct way to spell it
+  - semi-modular
