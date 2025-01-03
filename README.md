@@ -29,9 +29,9 @@ source scripts/dev-commands.sh
 ghost-build
 ```
 
-4. Prepare SD card (replace sdX with your SD card device):
+4. Prepare SD card (replace `SD-DEV` with your SD card device):
 ```bash
-sudo ./scripts/prepare-sd.sh /dev/sdX
+sudo ./scripts/prepare-sd.sh /dev/SD-DEV
 ```
 
 ## Development

@@ -8,7 +8,7 @@ GHOST_ROOT="$(pwd)"
 CROSS_COMPILE="arm-linux-gnueabi-"
 KERNEL_VERSION="5.10.92"
 
-# Colors for output
+# Colors for output: colors text
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
